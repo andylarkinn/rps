@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+/* button design*/
+
+.ready-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ffcc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ready-button:hover {
+    background-color: #0056b3;
+}
+
+/* ... previous styles ... */
+
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/*countdown timer*/
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.countdown-text {
+    font-size: 18px;
+    color: #777;
+}
+
+.countdown-timer {
+    font-size: 36px;
+    color: #e74c3c;
+}
+
+/*points*/
+
+/* ... previous styles ... */
+
+.points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.points-text {
+    font-size: 18px;
+    color: #777;
+}
+
+.points-counter {
+    font-size: 24px;
+    color: #2ecc71;
+}
+
+/* options */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.options-text {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.options-buttons {
+    display: flex;
+    gap: 10px;
+}
+/*
+.options-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #34db95;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+*/
+
+.options-button:hover {
+    background-color: #2980b9;
+}
+
+/*terminate button*/
+
+/* ... previous styles ... */
+
+.terminate-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.terminate-button:hover {
+    background-color: #c0392b;
+}
+
+/*paper button*/
+/* 
+.rps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+} */
+
+.paper-text {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+.paper-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #dbd534;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.paper-button:hover {
+    background-color: #2980b9;
+}
+
+/*scissors*/
+
+.rps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.scissors-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #55db34;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*rock*/
+
+/* .rps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+} */
+
+
+.rock-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4534db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* restart button */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.restart-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.restart-button:hover {
+    background-color: #d68910;
+}
+
+.ready-timer {
+    font-size: 2em;             /* Make the font size larger */
+    font-weight: bold;          /* Bold text */
+    color: #4CAF50;             /* Green color */
+    border: 2px solid #4CAF50;  /* Green border */
+    padding: 10px 20px;         /* Padding around the text */
+    border-radius: 5px;         /* Rounded corners */
+    text-align: center;         /* Center the text */
+    width: 150px;               /* Fixed width */
+    margin: 20px auto;          /* Center the div on the page */
+    background-color: #f4f4f4;  /* Light gray background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}

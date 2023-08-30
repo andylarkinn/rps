@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready & Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="page-title">Ready & Search Page</h1>
+
+    <div class="countdown">
+        <p class="countdown-text">Time remaining:</p>
+        <div class="countdown-timer" id="timer">5</div>
+    </div>
+
+    <div class="points">
+        <p class="points-text">Points:</p>
+        <div class="points-counter" id="points">0</div>
+    </div>
+
+    <div class="options">
+        <p class="options-text">Select an option:</p>
+        <div class="options-buttons">
+            <button class="rock-button">Rock</button>
+            <button class="paper-button">Paper</button>
+            <button class="scissors-button">Scissors</button>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="terminate-button" id="terminate-button">Exit</button>
+        <button class="restart-button" id="restart-button">Restart Game</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='countdown.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('connect', function() {
+            console.log('Connected to server');
+        });
+
+        socket.on('response', function(data) {
+            console.log('Received response:', data.data);
+        });
+
+        function sendMessage() {
+            var message = 'Hello from client';
+            socket.emit('message', message);
+        }
+    </script>
+</body>
+</html>

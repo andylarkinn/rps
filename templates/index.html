@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        var userId = "{{user_id}}";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rock-Paper-Scissors Game</h1>
+        <div class="game">
+            <button class="ready-button" id="ready-button">Ready & Search</button>
+            
+        </div>
+        <p><div class="ready-timer" id="ready-timer">0:00</div></p>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('connect', function() {
+            console.log('Connected to server');
+        });
+
+        socket.on('response', function(data) {
+            console.log('Received response:', data.data);
+        });
+
+        function sendMessage() {
+            var message = 'Hello from client';
+            socket.emit('message', message);
+        }
+    </script>
+</body>
+</html>
